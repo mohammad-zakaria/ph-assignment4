@@ -123,3 +123,16 @@ nav ul li a:hover, a.active{
 .pointer{
     cursor: pointer;
 }
+
+#modal{
+    display: none;
+    background-color: aqua;
+}
+
+#modal h3{
+    padding: 10px;
+}
+#modal p{
+    color: cadetblue;
+    text-align: center;
+}
