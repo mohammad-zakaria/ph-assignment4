@@ -51,10 +51,11 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id = "ticket-count" value="1" class="inp-style inp-width" type="number" name="">
                 </div>
                 <div class="plus-minus-btn">
-                    <p>+ -</p>
+                    <p><span onclick="handleTicketIncrease(true)">+</span>
+                    <span onclick="handleTicketIncrease(false)">-</span> </p>
                 </div>
             </div>
             
@@ -105,6 +106,23 @@
     </section>
 
     <!--Thank You-->
+
+
+<script>
+    function handleTicketIncrease(isIncrease){
+       const ticketInput = document.getElementById("ticket-count");
+       const ticketCount = parseInt(ticketInput.value);
+       
+       let ticketNewCount = ticketCount;
+       if(isIncrease == true){
+           ticketNewCount = ticketCount + 1;
+       }
+       if(isIncrease == false && ticketCount > 0){
+           ticketNewCount = ticketCount - 1;
+       }
+       ticketInput.value = ticketNewCount;
+    }
+</script>
 </body>
 
 </html>
